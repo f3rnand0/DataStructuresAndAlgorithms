@@ -6,7 +6,8 @@ public class BinarySearch {
     // Consists of dividing the sample in half every time. The low of igh half are chosen
     // by defining if the number to be looked at is lower or greater than that half
 
-    // O(log(n) T, O(1) S
+    // O(log(n) T
+    // O(1) S
     public String binarySearch(int[] arr, int key) {
         int first = 0;
         int last = arr.length - 1;
