@@ -1,4 +1,4 @@
-package code.interview.graphs;
+package code.interview.graph;
 
 import java.util.Arrays;
 
@@ -21,6 +21,10 @@ public class CycleInGraph {
 
     // O(v + e) T
     // O(v) S, where v are the number of vertices, and e the number of edges in the graph
+
+    public int WHITE = 0;
+    public int GREY = 1;
+    public int BLACK = 2;
 
     public boolean cycleInGraphUsingTwoDataStructures(int[][] edges) {
         int numberOfNodes = edges.length;
@@ -62,10 +66,6 @@ public class CycleInGraph {
         currentlyInStack[node] = false;
         return false;
     }
-
-    public int WHITE = 0;
-    public int GREY = 1;
-    public int BLACK = 2;
 
     // Using depth first search on every node define every visited node and node that are
     // currently in the call stack. In this way back edges can be used to define if there's a

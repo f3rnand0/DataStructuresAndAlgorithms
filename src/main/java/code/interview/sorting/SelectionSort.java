@@ -4,8 +4,9 @@ import java.util.Arrays;
 
 public class SelectionSort {
 
-    // In every iteration find the smallest number but ommiting an index until this index is the
-    // second last item of the array
+    // In every iteration find the smallest number and put it in an imaginary sorted list at the
+    // beginning of the array. This list is empty at the beginning. Do this with every number,
+    // except the last one because it's the largest number
 
     // Best: O(n^2) T, O(1) S
     // Average:  O(n^2) T, O(1) S
@@ -17,7 +18,7 @@ public class SelectionSort {
         int startIdx = 0;
         while (startIdx < array.length - 1) {
             int smallestIdx = startIdx;
-            for (int i = startIdx+1; i < array.length; i++) {
+            for (int i = startIdx + 1; i < array.length; i++) {
                 if (array[smallestIdx] > array[i]) {
                     smallestIdx = i;
                 }

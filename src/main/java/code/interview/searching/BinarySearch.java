@@ -3,35 +3,56 @@ package code.interview.searching;
 public class BinarySearch {
 
     // In binary-search the elements must be sorted. If they are unsorted, first sort them.
-    // Consists of dividing the sample in half every time. The low of igh half are chosen
-    // by defining if the number to be looked at is lower or greater than that half
+    // Consists of dividing the sample in half every time. The low or high half is chosen by
+    // defining if the number searched is lower or greater than the mid-number
 
     // O(log(n) T
     // O(1) S
-    public String binarySearch(int[] arr, int key) {
+    public int binarySearch(int[] array, int target) {
         int first = 0;
-        int last = arr.length - 1;
-        int mid = (first + last) / 2;
-
+        int last = array.length - 1;
+        int middle;
+        int potentialMatch;
         while (first <= last) {
-            if (arr[mid] < key) {
-                first = mid + 1;
-            } else if (arr[mid] == key) {
-                return "Element Found At Index " + mid;
+            middle = (first + last) / 2;
+            potentialMatch =  array[middle];
+            if (target == potentialMatch) {
+                return middle;
+            } else if (target < potentialMatch) {
+                last = middle - 1;
             } else {
-                last = mid - 1;
+                first = middle + 1;
             }
-            mid = (first + last) / 2;
         }
-        return "Element Not Found";
+        return -1;
     }
+
+    public int binarySearchRecursive(int[] array, int target) {
+        return binarySearchRecursive(array, target, 0, array.length - 1);
+    }
+
+    private int binarySearchRecursive(int[] array, int target, int first, int last) {
+        if (first > last) {
+            return -1;
+        }
+        int middle = (first + last) / 2;
+        int potentialMatch = array[middle];
+        if (target == potentialMatch) {
+            return middle;
+        } else if (target < potentialMatch) {
+            return binarySearchRecursive(array, target, first, middle - 1);
+        } else {
+            return binarySearchRecursive(array, target, middle + 1, last);
+        }
+    }
+
 
     public static void main(String[] args) {
         BinarySearch bs = new BinarySearch();
         int[] array = {10, 25, 32, 45, 55, 68};
-        String result = bs.binarySearch(array, 55);
-        System.out.println(result);
-        String result2 = bs.binarySearch(array, 100);
-        System.out.println(result2);
+        System.out.println("Element found at index " + bs.binarySearch(array, 55));
+        System.out.println("Element found at index " + bs.binarySearch(array, 100));
+        System.out.println("Element found at index " + bs.binarySearchRecursive(array, 55));
+        System.out.println("Element found at index " + bs.binarySearchRecursive(array, 100));
     }
 }
