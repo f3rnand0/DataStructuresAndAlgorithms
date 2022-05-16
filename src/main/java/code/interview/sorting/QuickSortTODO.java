@@ -1,6 +1,23 @@
 package code.interview.sorting;
 
-public class QuickSort {
+public class QuickSortTODO {
+
+    /* print array */
+    static void printArray(int[] arr) {
+        for (int value : arr) {
+            System.out.print(value + " ");
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = {99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0};
+        QuickSortTODO qs = new QuickSortTODO();
+
+        qs.quickSort(numbers, 0, numbers.length - 1);
+        printArray(numbers);
+    }
+
     void quickSort(int[] arr, int low, int high) {
         if (low < high) {
             int pIndex = partition(arr, low, high);
@@ -30,21 +47,6 @@ public class QuickSort {
         arr[high] = temp;
 
         return i + 1;
-    }
-
-
-    /* print array */
-    static void printArray(int[] arr) {
-        for (int value : arr) System.out.print(value + " ");
-        System.out.println();
-    }
-
-    public static void main(String[] args) {
-        int[] numbers = {99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0};
-        QuickSort qs = new QuickSort();
-
-        qs.quickSort(numbers, 0, numbers.length - 1);
-        printArray(numbers);
     }
 
 }

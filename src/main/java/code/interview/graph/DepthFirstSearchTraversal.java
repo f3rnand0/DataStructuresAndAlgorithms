@@ -1,4 +1,4 @@
-package code.interview.graphs;
+package code.interview.graph;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ public class DepthFirstSearchTraversal {
             this.name = name;
         }
 
-        // Traverses deep a graph all down before exploring the next branch and so on and so forth
+        // Traverses deep a graph all down before exploring the next branch
 
         // O(v + e) T
         // O(v) S

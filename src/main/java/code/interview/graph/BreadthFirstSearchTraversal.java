@@ -1,4 +1,4 @@
-package code.interview.graphs;
+package code.interview.graph;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

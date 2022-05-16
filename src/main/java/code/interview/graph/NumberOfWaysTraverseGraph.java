@@ -1,7 +1,7 @@
-package code.interview.graphs;
+package code.interview.graph;
 
 
-public class NumberWaysTraverseGraph {
+public class NumberOfWaysTraverseGraph {
 
     // The number of ways to reach at a specific position is the sum of "the number of ways to
     // reach the position above it (previousTop) and the number of ways to reach the position

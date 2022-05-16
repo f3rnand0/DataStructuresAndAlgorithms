@@ -32,9 +32,9 @@ public class NonConstructibleChange {
     public static void main(String[] args) {
         int[] coins = new int[]{1, 1, 2};
         System.out.println(NonConstructibleChange.nonConstructibleChange(coins));
-        coins =  new int[]{1, 1, 4};
+        coins = new int[]{1, 1, 4};
         System.out.println(NonConstructibleChange.nonConstructibleChange(coins));
-        coins =  new int[]{1, 2, 3, 5, 20};
+        coins = new int[]{1, 2, 3, 5, 20};
         System.out.println(NonConstructibleChange.nonConstructibleChange(coins));
     }
 

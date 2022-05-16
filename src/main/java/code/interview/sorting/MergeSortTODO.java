@@ -4,9 +4,18 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class MergeSort {
+public class MergeSortTODO {
 
-    /** mergeSort function */
+    public static void main(String[] args) {
+        MergeSortTODO sort = new MergeSortTODO();
+        ArrayList<Integer> numbers =
+            new ArrayList<>(Arrays.asList(99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0));
+        System.out.println(sort.mergeSort(numbers));
+    }
+
+    /**
+     * mergeSort function
+     */
     public List<Integer> mergeSort(List<Integer> array) {
         if (array.size() == 1) {
             return array;
@@ -18,7 +27,9 @@ public class MergeSort {
         return merge(mergeSort(left), mergeSort(right));
     }
 
-    /** merge function */
+    /**
+     * merge function
+     */
     public List<Integer> merge(List<Integer> left, List<Integer> right) {
         ArrayList<Integer> result = new ArrayList<>();
         int leftIndex = 0;
@@ -40,11 +51,5 @@ public class MergeSort {
         result.addAll(rightRemaining);
 
         return result;
-    }
-
-    public static void main(String[] args) {
-        MergeSort sort = new MergeSort();
-        ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0));
-        System.out.println(sort.mergeSort(numbers));
     }
 }
