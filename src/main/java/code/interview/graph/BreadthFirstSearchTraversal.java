@@ -17,7 +17,6 @@ public class BreadthFirstSearchTraversal {
         }
 
         // Traverses a graph level by level before exploring inner levels
-
         // O(v + e) T
         // O(v) S
         public List<String> breadthFirstSearch(List<String> array) {

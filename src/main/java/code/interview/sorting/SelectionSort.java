@@ -7,7 +7,6 @@ public class SelectionSort {
     // In every iteration find the smallest number and put it in an imaginary sorted list at the
     // beginning of the array. This list is empty at the beginning. Do this with every number,
     // except the last one because it's the largest number
-
     // Best: O(n^2) T, O(1) S
     // Average:  O(n^2) T, O(1) S
     // Worst:  O(n^2) T, O(1) S
