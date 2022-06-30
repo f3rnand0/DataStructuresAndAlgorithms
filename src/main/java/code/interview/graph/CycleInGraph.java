@@ -12,20 +12,18 @@ public class CycleInGraph {
     // - forward edge: an edge that connects an ancestor with a descendant that has already been
     // visited
 
+    public int WHITE = 0;
+    public int GREY = 1;
+    public int BLACK = 2;
+
     // Using depth first search on every node define every visited node and node that are
     // currently in the call stack. In this way back edges can be used to define if there's a
     // cycle or not.
     // The nodes present in the visited array and in the current stack array indicate the
     // ancestors for the current node. In that case a back edge has been found and there's a
     // cycle in the graph
-
     // O(v + e) T
     // O(v) S, where v are the number of vertices, and e the number of edges in the graph
-
-    public int WHITE = 0;
-    public int GREY = 1;
-    public int BLACK = 2;
-
     public boolean cycleInGraphUsingTwoDataStructures(int[][] edges) {
         int numberOfNodes = edges.length;
         boolean[] visited = new boolean[numberOfNodes];
@@ -73,10 +71,8 @@ public class CycleInGraph {
     // If the node visited is WHITE it means it's unvisited, if it's GREY it means it's in the
     // stack and therefore a back edged and a cycle is present, and if it's BLACK the path has
     // been finished, so it could be discarded
-
     // O(v + e) T
     // O(v) S, where v are the number of vertices, and e the number of edges in the graph
-
     public boolean cycleInGraphUsingThreeColors(int[][] edges) {
         int numberOfNodes = edges.length;
         int[] colors = new int[numberOfNodes];
@@ -96,7 +92,7 @@ public class CycleInGraph {
         return false;
     }
 
-    public boolean traverseAndColorNodes(int node, int[][] edges, int[] colors) {
+    private boolean traverseAndColorNodes(int node, int[][] edges, int[] colors) {
         colors[node] = GREY;
 
         int[] neighbors = edges[node];

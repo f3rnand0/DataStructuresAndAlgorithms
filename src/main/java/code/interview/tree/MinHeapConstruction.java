@@ -27,9 +27,10 @@ public class MinHeapConstruction {
 
         // Starts from the last parent node, sifts down if it's smaller than its children, then
         // continues with the other parent nodes in descending order to sift down those smaller
-        // parents
-        // Can be performed using sift up method but it will imply a n*log(n) time complexity
-        // O(n) T, O(1) S
+        // parents.
+        // Can be performed using sift up method, but it will imply a n*log(n) time complexity
+        // O(n) T
+        // O(1) S
         public List<Integer> buildHeap(List<Integer> array) {
             int firstParentIdx = (array.size() - 2) / 2;
             for (int currentIdx = firstParentIdx; currentIdx >= 0; currentIdx--) {
@@ -40,7 +41,8 @@ public class MinHeapConstruction {
 
         // Exchanges a parent node with one of its smaller children. The children to exchange is
         // the one with the least value
-        // O(log(n)) T, O(1) S
+        // O(log(n)) T
+        // O(1) S
         public void siftDown(int currentIdx, int endIdx, List<Integer> heap) {
             int childOneIdx = (currentIdx * 2) + 1;
             while (childOneIdx <= endIdx) {
@@ -58,7 +60,8 @@ public class MinHeapConstruction {
         }
 
         // Exchange a children node with its greater parent node
-        // O(log(n)) T, O(1) S
+        // O(log(n)) T
+        // O(1) S
         public void siftUp(int currentIdx, List<Integer> heap) {
             int parentIdx = (currentIdx - 1) / 2;
             while (currentIdx > 0 && heap.get(currentIdx) < heap.get(parentIdx)) {
@@ -68,14 +71,16 @@ public class MinHeapConstruction {
             }
         }
 
-        // O(1) T, O(1) S
+        // O(1) T
+        // O(1) S
         public int peek() {
             return heap.get(0);
         }
 
         // First swaps the first and last element of the array. Then, removes the last value.
         // And finally, sifts down the new root value in case there are greater children nodes
-        // O(log(n)) T, O(1) S
+        // O(log(n)) T
+        // O(1) S
         public int remove() {
             swap(0, heap.size() - 1, heap);
             int valueToRemove = heap.get(heap.size() - 1);
@@ -86,7 +91,8 @@ public class MinHeapConstruction {
 
         // Adds a value to the end of the array. Then sifts up this new value in case its parents
         // are greater
-        // O(log(n)) T, O(1) S
+        // O(log(n)) T
+        // O(1) S
         public void insert(int value) {
             heap.add(value);
             siftUp(heap.size() - 1, heap);

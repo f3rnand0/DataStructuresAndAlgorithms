@@ -6,16 +6,6 @@ import java.util.List;
 
 public class MergeSortTODO {
 
-    public static void main(String[] args) {
-        MergeSortTODO sort = new MergeSortTODO();
-        ArrayList<Integer> numbers =
-            new ArrayList<>(Arrays.asList(99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0));
-        System.out.println(sort.mergeSort(numbers));
-    }
-
-    /**
-     * mergeSort function
-     */
     public List<Integer> mergeSort(List<Integer> array) {
         if (array.size() == 1) {
             return array;
@@ -27,10 +17,7 @@ public class MergeSortTODO {
         return merge(mergeSort(left), mergeSort(right));
     }
 
-    /**
-     * merge function
-     */
-    public List<Integer> merge(List<Integer> left, List<Integer> right) {
+    private List<Integer> merge(List<Integer> left, List<Integer> right) {
         ArrayList<Integer> result = new ArrayList<>();
         int leftIndex = 0;
         int rightIndex = 0;
@@ -51,5 +38,12 @@ public class MergeSortTODO {
         result.addAll(rightRemaining);
 
         return result;
+    }
+
+    public static void main(String[] args) {
+        MergeSortTODO sort = new MergeSortTODO();
+        ArrayList<Integer> numbers =
+            new ArrayList<>(Arrays.asList(99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0));
+        System.out.println(sort.mergeSort(numbers));
     }
 }

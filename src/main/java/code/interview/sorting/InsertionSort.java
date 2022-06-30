@@ -10,7 +10,7 @@ public class InsertionSort {
     // Best: O(n) T, O(1) S
     // Average: O(n^2) T, O(1) S
     // Worst: O(n^2) T, O(1) S
-    public static int[] insertionSort(int[] array) {
+    public int[] insertionSort(int[] array) {
         if (array.length == 0) {
             return new int[]{};
         }
@@ -24,7 +24,7 @@ public class InsertionSort {
         return array;
     }
 
-    private static void swap(int i, int j, int[] array) {
+    private void swap(int i, int j, int[] array) {
         int temp = array[j];
         array[j] = array[i];
         array[i] = temp;
@@ -32,6 +32,7 @@ public class InsertionSort {
 
     public static void main(String[] args) {
         int[] numbers = new int[]{99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0};
-        System.out.println(insertionSort(numbers));
+        InsertionSort insertionSort = new InsertionSort();
+        System.out.println(insertionSort.insertionSort(numbers));
     }
 }

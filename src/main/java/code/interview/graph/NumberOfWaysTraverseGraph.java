@@ -8,7 +8,6 @@ public class NumberOfWaysTraverseGraph {
     // directly yo the left (previousLeft). Starting on the bottom right recursively produce the
     // number of ways knowing that in the top or left edges there's only one way to reach that
     // position
-
     // O(2^(n+m)) T. 2 because there are two possible ways to advance(left and up), and n+m
     // because is the number of iterations needed to get to the top left
     // O(n+m) S
@@ -24,7 +23,6 @@ public class NumberOfWaysTraverseGraph {
     // number of ways to reach to top and left edges is 1. For the other positions the number of
     // ways to reach them is the sum of "the number of ways to reach 'previous top position; and
     // 'previous left position'"
-
     // O(n*m) T. Two fors-loops are used to traverse the graph
     // O(n*m) S. A two-dimension array is needed
     public int numberOfWaysToTraverseGraphIterative(int width, int height) {

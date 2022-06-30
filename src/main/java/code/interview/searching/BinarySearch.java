@@ -5,7 +5,6 @@ public class BinarySearch {
     // In binary-search the elements must be sorted. If they are unsorted, first sort them.
     // Consists of dividing the sample in half every time. The low or high half is chosen by
     // defining if the number searched is lower or greater than the mid-number
-
     // O(log(n) T
     // O(1) S
     public int binarySearch(int[] array, int target) {
@@ -15,7 +14,7 @@ public class BinarySearch {
         int potentialMatch;
         while (first <= last) {
             middle = (first + last) / 2;
-            potentialMatch =  array[middle];
+            potentialMatch = array[middle];
             if (target == potentialMatch) {
                 return middle;
             } else if (target < potentialMatch) {
@@ -45,7 +44,6 @@ public class BinarySearch {
             return binarySearchRecursive(array, target, middle + 1, last);
         }
     }
-
 
     public static void main(String[] args) {
         BinarySearch bs = new BinarySearch();
