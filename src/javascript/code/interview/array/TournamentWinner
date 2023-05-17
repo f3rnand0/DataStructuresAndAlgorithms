@@ -1,0 +1,49 @@
+const HOME_TEAM_WON = 1;
+
+// A map is needed to store the points of every winner in every competition. Iterate through
+// every competition and define every winner. Then, put every winner in the map and put 
+// 3 additional  points to the current score. In case the winner isn't in the map put it 
+// with a score of 0. Later, compare the score of the current winning team with the score
+// of the current best team. If the first is greater then that is the current best team.
+// Finally the value of the 'currentBestTeam' holds the tournamnet winner.
+// O(n) T, where n is the number of competitions
+// O(k) S, where k is the number of teams
+function tournamentWinner(competitions, results) {
+  let currentBestTeam = "";
+  const scores = { [currentBestTeam]: 0 };
+
+  for (let idx = 0; idx < competitions.length; idx++) {
+    const result = results[idx];
+    const [homeTeam, awayTeam] = competitions[idx];
+
+    const winningTeam = result === HOME_TEAM_WON ? homeTeam : awayTeam;
+
+    updateScores(winningTeam, 3, scores);
+
+    if (scores[winningTeam] > scores[currentBestTeam]) {
+      currentBestTeam = winningTeam;
+    }
+  }
+
+  return currentBestTeam;
+}
+
+function updateScores(team, points, scores) {
+  if (!(team in scores)) {
+    scores[team] = 0;
+  }
+
+  scores[team] += points;
+}
+
+console.log(
+  tournamentWinner(
+    [
+      ["HTML", "C#"],
+      ["C#", "Python"],
+      ["Python", "HTML"],
+    ],
+    [0, 0, 1]
+  )
+);
+console.log(tournamentWinner([["A", "B"]], [0]));

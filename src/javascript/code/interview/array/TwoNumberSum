@@ -1,0 +1,22 @@
+// Use a set to store the difference between the targetSum variable and the current integer.
+// Then when a match is found return the array with the current potentialMatch and the 
+// integer.
+// O(n) T
+// O(n) S
+function twoNumberSum(array, targetSum) {
+  const nums = {};
+  for (const num of array) {
+    const potentialMatch = targetSum - num;
+    if (potentialMatch in nums) {
+      return [potentialMatch, num];
+    }
+    else {
+      nums[num] = true;
+    }
+  }
+  return [];
+}
+
+console.log(twoNumberSum([3, 5, -4, 8, 11, 1, -1, 6], 10));
+console.log(twoNumberSum([14], 15));
+console.log(twoNumberSum([15], 15));
