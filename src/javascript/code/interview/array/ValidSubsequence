@@ -1,0 +1,19 @@
+// Iterate over the array and the subsequence at the same time. Advance on the subsequence once the
+// current items of both are equal. Check if the subsequence iteration reached the end, if yes then
+// quit the loop. Return true only under two scenarios: when the subsequence reached the end and 
+// the array didn't reach the end, or when the subsequence reached the end and the array reach the
+// end.
+// O(n) T
+// O(1) S
+function isValidSubsequence(array, sequence) {
+    let seqIdx = 0;
+    for(const value of array) {
+        if (seqIdx === sequence.length) break;
+        if (sequence[seqIdx] === value) seqIdx++;
+    }
+    return seqIdx === sequence.length;
+}
+
+console.log(isValidSubsequence([5, 1, 22, 25, 6, -1, 8, 10], [1, 6, -1 ,10]));
+console.log(isValidSubsequence([5, 1, 22, 25, 6, -1, 8, 10], [4, 5, 1, 22, 25, 6, -1, 8, 10]));
+console.log(isValidSubsequence([5, 1, 22, 25, 6, -1, 8, 10], [26]));

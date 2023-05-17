@@ -21,7 +21,7 @@ public class CycleInGraph {
     // cycle or not.
     // The nodes present in the visited array and in the current stack array indicate the
     // ancestors for the current node. In that case a back edge has been found and there's a
-    // cycle in the graph
+    // cycle in the graph.
     // O(v + e) T
     // O(v) S, where v are the number of vertices, and e the number of edges in the graph
     public boolean cycleInGraphUsingTwoDataStructures(int[][] edges) {
@@ -70,7 +70,7 @@ public class CycleInGraph {
     // cycle or not.
     // If the node visited is WHITE it means it's unvisited, if it's GREY it means it's in the
     // stack and therefore a back edged and a cycle is present, and if it's BLACK the path has
-    // been finished, so it could be discarded
+    // been finished, so it could be discarded.
     // O(v + e) T
     // O(v) S, where v are the number of vertices, and e the number of edges in the graph
     public boolean cycleInGraphUsingThreeColors(int[][] edges) {

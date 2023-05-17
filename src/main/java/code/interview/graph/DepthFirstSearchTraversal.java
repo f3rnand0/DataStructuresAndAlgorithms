@@ -14,7 +14,7 @@ public class DepthFirstSearchTraversal {
             this.name = name;
         }
 
-        // Traverses deep a graph all down before exploring the next branch
+        // Traverses deep a graph all down before exploring the next branch.
         // O(v + e) T
         // O(v) S
         public List<String> depthFirstSearch(List<String> array) {

@@ -12,8 +12,8 @@ public class NonConstructibleChange {
     // 1. So, return that amount because it can't be created
     // 2.- The coin value is smaller than or equal to the amount of change that can be currently
     // created plus 1. So, add the value to a cumulative variable and continue iterating through
-    // the coins
-    // O(n*log(n)) T
+    // the coins.
+    // O(n * log(n)) T
     // O(1) S
     public static int nonConstructibleChange(int[] coins) {
         Arrays.sort(coins);
