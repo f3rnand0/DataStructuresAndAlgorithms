@@ -5,7 +5,8 @@ import java.util.List;
 
 public class Values {
 
-
+  // O(n) T
+  // O(n) T
   public static List<String> linkedListValuesUsingWhile(Node<String> head) {
     List<String> values = new ArrayList<>();
     while (head != null) {
@@ -15,6 +16,9 @@ public class Values {
     return values;
   }
 
+  // Use another method to use the list through all the calls
+  // O(n) T
+  // O(n) T
   public static List<String> linkedListValuesUsingRecursion(Node<String> head) {
     List<String> values = new ArrayList<>();
     return fillValues(values, head);
