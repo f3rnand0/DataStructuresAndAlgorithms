@@ -21,12 +21,10 @@ public class Find {
     if (head == null) {
       return false;
     }
-    else if (head.val == target) {
+    if (head.val == target) {
       return true;
     }
-    else {
-      return linkedListFindUsingRecursion(head.next, target);
-    }
+    return linkedListFindUsingRecursion(head.next, target);
   }
 
   public static void main(String[] args){
