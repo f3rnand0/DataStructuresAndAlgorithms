@@ -1,6 +1,6 @@
 package code.interview.linkedlist;
 
-public class Find {
+public class FindValue {
 
   // O(n) T
   // O(1) S
@@ -35,10 +35,10 @@ public class Find {
     a.next = b;
     b.next = c;
     c.next = d;
-    System.out.println(Find.linkedListFindUsingWhile(a, "d"));
-    System.out.println(Find.linkedListFindUsingRecursion(a, "d"));
+    System.out.println(FindValue.linkedListFindUsingWhile(a, "d"));
+    System.out.println(FindValue.linkedListFindUsingRecursion(a, "d"));
     Node<Integer> node1 = new Node<>(42);
-    System.out.println(Find.linkedListFindUsingWhile(node1, 100));
-    System.out.println(Find.linkedListFindUsingRecursion(node1, 100));
+    System.out.println(FindValue.linkedListFindUsingWhile(node1, 100));
+    System.out.println(FindValue.linkedListFindUsingRecursion(node1, 100));
   }
 }

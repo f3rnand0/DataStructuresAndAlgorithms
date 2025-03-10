@@ -1,6 +1,6 @@
 package code.interview.linkedlist;
 
-public class SumOfLinkedLists {
+public class SumTwoLinkedLists {
 
     // Sum both numbers as if you were in school. Consider the carry when the sum is greater or
     // equal to 10. So the algorithm consists of iterating both Linked Lists at the same time and

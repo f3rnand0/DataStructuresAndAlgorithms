@@ -1,6 +1,6 @@
 package code.interview.linkedlist;
 
-public class Sum {
+public class SumValues {
 
   // O(n) T
   // O(1) S
@@ -33,9 +33,9 @@ public class Sum {
     b.next = c;
     c.next = d;
     d.next = e;
-    System.out.println(Sum.sumListUsingWhile(a));
-    System.out.println(Sum.sumListUsingRecursion(a));
-    System.out.println(Sum.sumListUsingWhile(null));
-    System.out.println(Sum.sumListUsingRecursion(null));
+    System.out.println(SumValues.sumListUsingWhile(a));
+    System.out.println(SumValues.sumListUsingRecursion(a));
+    System.out.println(SumValues.sumListUsingWhile(null));
+    System.out.println(SumValues.sumListUsingRecursion(null));
   }
 }

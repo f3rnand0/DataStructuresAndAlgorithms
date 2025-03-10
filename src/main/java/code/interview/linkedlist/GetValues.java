@@ -3,7 +3,7 @@ package code.interview.linkedlist;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Values {
+public class GetValues {
 
   // O(n) T
   // O(n) T
