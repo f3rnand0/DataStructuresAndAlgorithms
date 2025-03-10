@@ -1,10 +1,6 @@
 package code.interview.linkedlist;
 
-public class Helper {
-
-}
-
-class Node<T> {
+public class Node<T> {
   T val;
   Node<T> next;
 
