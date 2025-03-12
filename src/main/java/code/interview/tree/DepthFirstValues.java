@@ -7,6 +7,8 @@ import java.util.Stack;
 public class DepthFirstValues {
 
   // Use a stack to store values of the tree. Start with the root, and then the children.
+  // First the left and its children subsequently (first the left, then the right), then
+  // the right and its children subsequently (first the left, then the right).
   // Always insert the right child before the left child. It ends when the stack is empty
   // O(n) T
   // O(n) S
