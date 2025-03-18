@@ -44,7 +44,7 @@ public class BreadthFirstValues {
     b.left = d;
     b.right = e;
     c.right = f;
-    System.out.println(BreadthFirstValues.breadthFirstValues(a));
-    System.out.println(BreadthFirstValues.breadthFirstValues(null));
+    System.out.println(breadthFirstValues(a));
+    System.out.println(breadthFirstValues(null));
   }
 }

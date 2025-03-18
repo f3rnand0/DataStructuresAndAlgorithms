@@ -57,9 +57,9 @@ public class DepthFirstValues {
     b.left = d;
     b.right = e;
     c.right = f;
-    System.out.println(DepthFirstValues.depthFirstValuesUsingWhile(a));
-    System.out.println(DepthFirstValues.depthFirstValuesUsingWhile(null));
-    System.out.println(DepthFirstValues.depthFirstValuesUsingRecursion(a));
-    System.out.println(DepthFirstValues.depthFirstValuesUsingRecursion(null));
+    System.out.println(depthFirstValuesUsingWhile(a));
+    System.out.println(depthFirstValuesUsingWhile(null));
+    System.out.println(depthFirstValuesUsingRecursion(a));
+    System.out.println(depthFirstValuesUsingRecursion(null));
   }
 }

@@ -59,9 +59,9 @@ public class TreeSum {
     //  / \      \
     // 4   -2     1
 
-    System.out.println(TreeSum.treeSumUsingRecursion(a));
-    System.out.println(TreeSum.treeSumUsingRecursion(null));
-    System.out.println(TreeSum.treeSumUsingWhile(a));
-    System.out.println(TreeSum.treeSumUsingWhile(null));
+    System.out.println(treeSumUsingRecursion(a));
+    System.out.println(treeSumUsingRecursion(null));
+    System.out.println(treeSumUsingWhile(a));
+    System.out.println(treeSumUsingWhile(null));
   }
 }
