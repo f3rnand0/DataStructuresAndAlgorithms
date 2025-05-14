@@ -16,10 +16,10 @@ public class IslandCount {
   // O(rows * columns) S
   public static int islandCount(List<List<String>> grid) {
     int islands = 0;
-    Set<String> visitedNodes = new HashSet<>();
+    Set<String> visitedLand = new HashSet<>();
     for (int row = 0; row < grid.size(); row++) {
       for (int column = 0; column < grid.get(row).size(); column++) {
-        if (explore(grid, row, column, visitedNodes)) {
+        if (explore(grid, row, column, visitedLand)) {
           islands++;
         }
       }
@@ -28,20 +28,20 @@ public class IslandCount {
   }
 
   private static boolean explore(List<List<String>> grid, int row, int column,
-                              Set<String> visitedNodes) {
+                              Set<String> visitedLand) {
     boolean rowInbounds = (row >=0 && row < grid.size());
     boolean columnInbounds = (column >=0 && column < grid.getFirst().size());
     if (!rowInbounds || !columnInbounds) {
       return false;
     }
-    if (grid.get(row).get(column).equals("W") || visitedNodes.contains(row + "," + column)) {
+    if (grid.get(row).get(column).equals("W") || visitedLand.contains(row + "," + column)) {
       return false;
     }
-    visitedNodes.add(row + "," + column);
-    explore(grid, row + 1, column, visitedNodes);
-    explore(grid, row - 1, column, visitedNodes);
-    explore(grid, row, column + 1, visitedNodes);
-    explore(grid, row, column - 1, visitedNodes);
+    visitedLand.add(row + "," + column);
+    explore(grid, row + 1, column, visitedLand);
+    explore(grid, row - 1, column, visitedLand);
+    explore(grid, row, column + 1, visitedLand);
+    explore(grid, row, column - 1, visitedLand);
     return true;
   }
 
