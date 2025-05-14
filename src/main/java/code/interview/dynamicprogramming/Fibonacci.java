@@ -8,11 +8,8 @@ public class Fibonacci {
   // O(2^n) T
   // O(n) S (only n elements are put in the call stack)
   public static int fibBruteForce(int n) {
-    if (n == 0) {
-      return 0;
-    }
-    if (n == 1) {
-      return 1;
+    if (n == 0 || n == 1) {
+      return n;
     }
     return fibBruteForce(n - 1) + fibBruteForce(n - 2);
   }
