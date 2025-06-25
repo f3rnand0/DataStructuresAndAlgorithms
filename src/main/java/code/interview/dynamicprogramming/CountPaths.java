@@ -12,8 +12,8 @@ public class CountPaths {
   // wall (return 0), and when the current position is the bottom left (return 1)
   // Sum every countPath call, that consists of increasing only row by 1 or increasing only
   // the column by 1
-  // O(2^(r+c)) T
-  // O(r+c) S (maximum recursion stack size)
+  // O( 2^(r+c) ) T
+  // O( r+c ) S (maximum recursion stack size)
   public static int countPathsBruteForce(List<List<String>> grid) {
     return countPathsBruteForce(grid, 0, 0);
   }

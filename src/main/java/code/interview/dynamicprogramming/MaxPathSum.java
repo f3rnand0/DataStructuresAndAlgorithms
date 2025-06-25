@@ -13,10 +13,10 @@ public class MaxPathSum {
   // can be selected and then summed up to the current node value.
   // Iterating through the list and checking which of the nodes has a higher value, the max
   // sum can be found. The base case would be when being in the last child node where the value
-  // returned would be the value of the child. 
+  // returned would be the value of the child.
   // Finally, a memo can be used to store already calculated sums to avoid recalculating sums
-  // O ( r*c ) T
-  // O ( r*c ) S
+  // O( r*c ) T
+  // O( r*c ) S
   public static int maxPathSumMemoization(List<List<Integer>> grid) {
     return maxPathSumMemoization(grid, 0, 0, new HashMap<>());
   }
