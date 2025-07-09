@@ -8,7 +8,7 @@ public class CountingChange {
   // Generate a tree where the amount is the root node. Then, start subtracting from the amount
   // every coin multiplied n times until the result is 0 or greater than zero. When the result
   // is zero, means that a change can be obtained with that coin(s). So add 1 to the a counter
-  // variable. Also use a index variable to navigate through the list of coins.
+  // variable. Also use an index variable to navigate through the list of coins.
   // For the recursion the bases cases would be when the amount is 0 and once the index is equal
   // to the list size
   // Also, use a memo to store already calculated changes.
